@@ -2,9 +2,9 @@ import requests
 from datetime import datetime
 
 
-username = "divyachandrapandi"
-API_KEY = "aa689022297f21b8b16fb0309d225741"
-APP_ID = "9a7a92a6"
+
+API_KEY = your api key
+APP_ID = your app id
 EXERCISE_ENDPOINT = "https://trackapi.nutritionix.com/v2/natural/exercise"
 user_input = input("What exercise did you completed successfully: ")
 
@@ -26,8 +26,8 @@ data = response.json()
 today = datetime.now()
 sheety_username = "divya55"
 sheety_password = "passhatj"
-sheety_endpoint = "https://api.sheety.co/159c57a4845f54585761b941dcef8bd7/workoutTracking/workouts"
-sheety_bearer_token = "Basic ZGl2eWE1NTpwYXNzaGF0ag=="
+sheety_endpoint = "sheety_endpoint"
+sheety_bearer_token = "sheety Token"
 # Bearer authentication
 headers = {
     "Authorization": sheety_bearer_token
@@ -49,4 +49,3 @@ for n in range(len(data["exercises"])):
     # response = requests.post(url=sheety_endpoint, json=workouts, auth =(USERNAME, PASSWORD))
     sheety_res = requests.post(url=sheety_endpoint, json=workouts, headers=headers)
     print(sheety_res.status_code)
-replit = "https://replit.com/@Divya55/Fitnesstracker?v=1#main.py"
